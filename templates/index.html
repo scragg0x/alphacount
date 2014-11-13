@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>alphacount</title>
+</head>
+<body>
+<form method="POST">
+  <label>Type some words and submit</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Submit" />
+</form>
+{% if counter %}
+  <table cellpadding="5">
+  {% for letter, c in counter.items() %}
+  <tr>
+    <td>{{ letter }}</td>
+    <td>{{ c }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+{% endif %}
+</body>
+</html>
